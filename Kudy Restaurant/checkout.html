@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Kudy Restaurant</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+
+<body>
+    <!-- =====================================
+         HEADER
+         ===================================== -->
+    <header class="checkout-header">
+        <a href="menu.html" class="checkout-logo">
+            <img src="images/logo.jpg" alt="Kudy Restaurant Logo">
+            <span>Kudy Restaurant</span>
+        </a>
+
+        <a href="menu.html" class="back-menu">
+            <i class="fa fa-arrow-left"></i>
+            Back to Menu
+        </a>
+    </header>
+
+    <!-- =====================================
+         MAIN CHECKOUT
+         ===================================== -->
+
+    <main class="checkout-container">
+        <!-- PAGE TITLE -->
+
+        <div class="checkout-heading">
+            <span class="checkout-icon">
+                <i class="fa fa-cart-shopping"></i>
+            </span>
+
+            <div>
+                <h1>Checkout</h1>
+                <p>Review your order before placing it.</p>
+            </div>
+        </div>
+
+
+        <!-- =====================================
+             ORDER CONTENT
+             ===================================== -->
+
+        <section class="checkout-layout">
+            <!-- ================================
+                 ORDER SUMMARY
+                 ================================= -->
+            <div class="order-summary">
+                <div class="section-title">
+                    <h2>Order Summary</h2>
+                    <span id="item-count">
+                        0 items
+                    </span>
+                </div>
+
+                <!-- Items will be inserted by JS -->
+
+                <div id="checkout-items" class="checkout-items"></div>
+
+                <!-- Empty cart -->
+
+                <div id="empty-checkout" class="empty-checkout">
+                    <i class="fa fa-cart-shopping"></i>
+                    <h3>Your cart is empty</h3>
+                    <p>
+                        Add some delicious meals before checking out.
+                    </p>
+                    <a href="menu.html">
+                        Browse Menu
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- =================================
+                 ORDER TOTAL
+                 ================================= -->
+
+            <aside class="checkout-summary">
+                <h2>Order Total</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong>
+                        <span id="subtotal">0</span> Tzs
+                    </strong>
+                </div>
+
+
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <strong>0 Tzs</strong>
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong>
+                        <span id="checkout-total">0</span> Tzs
+                    </strong>
+                </div>
+
+
+                <button id="place-order" class="place-order" disabled>
+                    <i class="fa fa-check"></i>
+                    Place Order
+                </button>
+
+
+                <p class="secure-note">
+                    <i class="fa fa-shield-halved"></i>
+                    Your order details are safe.
+                </p>
+
+            </aside>
+        </section>
+    </main>
+
+    <!-- Checkout JavaScript -->
+
+    <script src="js/checkout.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Kudy Restaurant Website</title>
+  </head>
+  <body>
+    <!--this is a navigational section that's have a logo and the navigation links-->
+    <header>
+      <div class="logo" id="header-logo">
+        <a href="index.html">
+          <img src="images/logo.jpg" width="100" alt="this is logo image" />
+          <h1>Kudy Restaurant</h1>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nav-link"> HOME </a></li>
+          <li><a href="menu.html" class="nav-link"> MENU </a></li>
+          <li><a href="about.html" class="nav-link"> ABOUT US </a></li>
+          <li><a href="gallery.html" class="nav-link"> GALLERY </a></li>
+          <li><a href="reserve.html" class="nav-link"> RESERVATION </a></li>
+          <li><a href="contact.html" class="nav-link active"> CONTACT US </a></li>
+        </ul>
+      </nav>
+      <button class="Cart-btn">
+        <span class="cart-icon">
+          <i class="fa fa-cart-plus" aria-hidden="true"></i>
+        </span>
+        <span class="cart-count">0</span>
+      </button>
+    </header>
+    <main>
+      <h1> GET IN TOUCH WITH US</h1>
+      <p>
+        Have questions about private catering, bookings, or want food delivered to your hotel?
+      </p>
+
+      <section class="reserve-form">
+        <div class="container">
+          <div class="contact-form-wrapper">
+            <form action="https://formspree.io/f/xnpnglka" id="contactform" class="contact-form" method="POST">
+              <div class="form-group">
+                <label for="name"> Full Name </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder=" John Doe"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone-number"> Phone Number </label>
+                <input
+                  type="tel"
+                  id="phone-number"
+                  name="phone-number"
+                  placeholder="+255 874 106 677"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email"> Email </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="johndoe@example.com "
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message"> Your Message </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder=" Your Message"
+                  rows="7"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit">Send Your Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+                        <!--footer section-->
+        <footer>
+            <div class="about">
+                <div class="restaurant-logo">
+                    <img src="images/logo.jpg" width="100" alt="Kudy Restaurant logo">
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cupiditate quas optio modi quis nobis doloribus, doloremque, culpa cumque molestias enim dolorum impedit nostrum, error ullam a corporis ut deleniti.</p>
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/kudyrestaurant" class="social-icon tiktok" target="_blank">
+                                <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kudyrestaurant" class="social-icon instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/kudyrestaurant" class="social-icon facebook" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/kudyrestaurant" class="social-icon youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" class="nav-link"> HOME </a></li>
+                    <li><a href="menu.html" class="nav-link"> MENU </a></li>
+                    <li><a href="about.html" class="nav-link"> ABOUT US </a></li>
+                    <li><a href="gallery.html" class="nav-link"> GALLERY </a></li>
+                    <li><a href="reserve.html" class="nav-link"> RESERVATION </a></li>
+                    <li><a href="contact.html" class="nav-link"> CONTACT US </a></li>
+                </ul>
+            </div>
+
+            <div class="working-days">
+                <h3>Opening Hours</h3>
+
+                <div class="opening-day">
+                    <span>Monday</span>
+                    <span>6:00 AM - 9:00 PM</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Tuesday</span>
+                    <span>6:00 AM - 9:00 PM</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Wednesday</span>
+                    <span>6:00 AM - 9:00 PM</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Thursday</span>
+                    <span>6:00 AM - 9:00 PM</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Friday</span>
+                    <span>7:00 AM - 4:00 PM</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Saturday</span>
+                    <span>Closed</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Sunday</span>
+                    <span>7:00 AM - 4:00 PM</span>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                        <!-- contact items + icons -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-phone"></i>
+                    </div> 
+                    <p>+255 674 732 970 <br> +255 782 106 776</p>
+                </div>
+                <div class="contact-item">
+                    <div class="email-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div> 
+                    <p>kudyrestaurant@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <div class="location-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div> 
+                    <p>Mwanza, Tanzania <br> Nyerere Road street</p>
+                </div>
+              
+                                <!--- copyright info-->
+                <div class="copyright">
+                    <p>&copy; 2026 Kudy Restaurant. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+      </main>
+      <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kudy Restaurant Website</title>
+</head>
+<body>
+         <!--this is a navigational section that's have a logo and the navigation links-->
+    <header>
+        <div class="logo" id="header-logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" width="100" alt="this is logo image">
+                <h1>Kudy Restaurant</h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link"> HOME </a></li>
+                <li><a href="menu.html" class="nav-link active"> MENU </a></li>
+                <li><a href="about.html" class="nav-link"> ABOUT US </a></li>
+                <li><a href="gallery.html" class="nav-link"> GALLERY </a></li>
+                <li><a href="reserve.html" class="nav-link"> RESERVATION </a></li>
+                <li><a href="contact.html" class="nav-link"> CONTACT US </a></li>
+            </ul>
+        </nav>
+        <button class="Cart-btn">
+            <span class="cart-icon">
+                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            </span>
+            <span class="cart-count">0</span>
+        </button>
+    </header>
+                    <!-- main menu section-->
+    <main class="main-content">
+        <section class="menu-section">
+            <h2>Our Menu</h2>
+            <p>Every meal tells a story and every bite creates a memory</p>
+
+            <!-- Search & Filter Controls (Pure HTML / CSS active filtering) -->
+            <div class="menu-controls">
+                <div class="search-box">
+                    <i class="fas fa-magnifying-glass"></i>
+                    <input type="search" id="food-search" name="food-search" placeholder="Search for food, drinks, snacks...">
+                </div>
+
+                <div class="filter-tabs">
+                    <input type="radio" name="food-filter" id="filter-all" value="all" checked>
+                    <label for="filter-all" class="filter-btn">
+                        <i class="fas fa-utensils"></i> All Dishes
+                    </label>
+
+                    <input type="radio" name="food-filter" id="filter-breakfast" value="breakfast">
+                    <label for="filter-breakfast" class="filter-btn">
+                        <i class="fas fa-mug-hot"></i> Breakfast
+                    </label>
+
+                    <input type="radio" name="food-filter" id="filter-lunch" value="lunch">
+                    <label for="filter-lunch" class="filter-btn">
+                        <i class="fas fa-bowl-rice"></i> Lunch
+                    </label>
+
+                    <input type="radio" name="food-filter" id="filter-dinner" value="dinner">
+                    <label for="filter-dinner" class="filter-btn">
+                        <i class="fas fa-drumstick-bite"></i> Dinner
+                    </label>
+
+                    <input type="radio" name="food-filter" id="filter-drinks" value="drinks">
+                    <label for="filter-drinks" class="filter-btn">
+                        <i class="fas fa-wine-glass"></i> Drinks
+                    </label>
+
+                    <input type="radio" name="food-filter" id="filter-snacks" value="snacks">
+                    <label for="filter-snacks" class="filter-btn">
+                        <i class="fas fa-burger"></i> Fast Food &amp; Snacks
+                    </label>
+                </div>
+            </div>
+
+                    <!-- menu cards-->
+            <div class="menu-grid">
+
+                     <!-- foods cards-->
+                <!-- 1. Biryani Kuku -->
+                <div class="menu-card lunch dinner" data-category="lunch dinner">
+                    <img src="images/foods/biriyanikuku.jpg" width="200" alt="Biryani Kuku">
+                    <h4>Biryani Kuku</h4>
+                    <span>7,000 Tzs</span>
+                    <button class="add-btn" data-name="Biryani Kuku" data-price="7000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 2. Classic Beef Burger -->
+                <div class="menu-card lunch snacks" data-category="lunch snacks">
+                    <img src="images/foods/burger.jpg" width="200" alt="Classic Beef Burger">
+                    <h4>Classic Beef Burger</h4>
+                    <span>5,000 Tzs</span>
+                    <button class="add-btn" data-name="Classic Beef Burger" data-price="5000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 3. Crispy Fried Chicken -->
+                <div class="menu-card lunch dinner snacks" data-category="lunch dinner snacks">
+                    <img src="images/foods/kukumkaango.jpg" width="200" alt="Crispy Fried Chicken">
+                    <h4>Crispy Fried Chicken</h4>
+                    <span>10,000 Tzs</span>
+                    <button class="add-btn" data-name="Crispy Fried Chicken" data-price="10000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 4. Pilau Nyama Special -->
+                <div class="menu-card lunch dinner" data-category="lunch dinner">
+                    <img src="images/foods/pilaunyama.jpg" width="200" alt="Pilau Nyama Special">
+                    <h4>Pilau Nyama Special</h4>
+                    <span>8,000 Tzs</span>
+                    <button class="add-btn" data-name="Pilau Nyama Special" data-price="8000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+                
+                <!-- 5. Cheesy Supreme Pizza -->
+                <div class="menu-card lunch dinner snacks" data-category="lunch dinner snacks">
+                    <img src="images/foods/pizzah.jpg" width="200" alt="Cheesy Supreme Pizza">
+                    <h4>Cheesy Supreme Pizza</h4>
+                    <span>15,000 Tzs</span>
+                    <button class="add-btn" data-name="Cheesy Supreme Pizza" data-price="15000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 6. Celebration Cakes -->
+                <div class="menu-card breakfast snacks" data-category="breakfast snacks">
+                    <img src="images/foods/cake.jpg" width="200" alt="Celebration Cakes">
+                    <h4>Celebration Cakes</h4>
+                    <span>20,000 Tzs</span>
+                    <button class="add-btn" data-name="Celebration Cakes" data-price="20000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 7. Italian Creamy Pasta -->
+                <div class="menu-card lunch dinner" data-category="lunch dinner">
+                    <img src="images/foods/pasta.jpg" width="200" alt="Italian Creamy Pasta">
+                    <h4>Italian Creamy Pasta</h4>
+                    <span>5,000 Tzs</span>
+                    <button class="add-btn" data-name="Italian Creamy Pasta" data-price="5000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 8. Fresh Tropical Juices -->
+                <div class="menu-card drinks" data-category="drinks">
+                    <img src="images/foods/fresh-juice.jpg" width="200" alt="Fresh Tropical Juices">
+                    <h4>Fresh Tropical Juices</h4>
+                    <span>2,000 Tzs</span>
+                    <button class="add-btn" data-name="Fresh Tropical Juices" data-price="2000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 9. Ugali Nyama Choma -->
+                <div class="menu-card lunch dinner" data-category="lunch dinner">
+                    <img src="images/foods/ugalinyamachoma.jpg" width="200" alt="Ugali Nyama Choma">
+                    <h4>Ugali Nyama Choma</h4>
+                    <span>7,000 Tzs</span>
+                    <button class="add-btn" data-name="Ugali Nyama Choma" data-price="7000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 10. Ugali Samaki wa Kupaka -->
+                <div class="menu-card lunch dinner" data-category="lunch dinner">
+                    <img src="images/foods/ugalisamaki.jpg" width="200" alt="Ugali Samaki wa Kupaka">
+                    <h4>Ugali Samaki wa Kupaka</h4>
+                    <span>15,000 Tzs</span>
+                    <button class="add-btn" data-name="Ugali Samaki wa Kupaka" data-price="15000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 11. Wali Kuku wa Kukaanga -->
+                <div class="menu-card lunch dinner" data-category="lunch dinner">
+                    <img src="images/foods/walikuku.jpg" width="200" alt="Wali Kuku wa Kukaanga">
+                    <h4>Wali Kuku wa Kukaanga</h4>
+                    <span>7,000 Tzs</span>
+                    <button class="add-btn" data-name="Wali Kuku wa Kukaanga" data-price="7000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 12. Biriyani Mbuzi Ya Kifalme -->
+                <div class="menu-card lunch dinner" data-category="lunch dinner">
+                    <img src="images/foods/biriyanimbuzi.jpg" width="200" alt="Biriyani Mbuzi Ya Kifalme">
+                    <h4>Biriyani Mbuzi Ya Kifalme</h4>
+                    <span>17,000 Tzs</span>
+                    <button class="add-btn" data-name="Biriyani Mbuzi Ya Kifalme" data-price="17000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 13. Mihogo ya Nazi & Samaki -->
+                <div class="menu-card breakfast lunch snacks" data-category="breakfast lunch snacks">
+                    <img src="images/foods/mihigosamaki.jpg" width="200" alt="Mihogo ya Nazi & Samaki">
+                    <h4>Mihogo ya Nazi &amp; Samaki</h4>
+                    <span>20,000 Tzs</span>
+                    <button class="add-btn" data-name="Mihogo ya Nazi & Samaki" data-price="20000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 14. Soft Layered Chapati -->
+                <div class="menu-card breakfast snacks" data-category="breakfast snacks">
+                    <img src="images/foods/chapati.jpg" width="200" alt="Soft Layered Chapati">
+                    <h4>Soft Layered Chapati</h4>
+                    <span>5,000 Tzs</span>
+                    <button class="add-btn" data-name="Soft Layered Chapati" data-price="5000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 15. Crispy Meat Sambusa -->
+                <div class="menu-card breakfast snacks" data-category="breakfast snacks">
+                    <img src="images/foods/sambusa.jpg" width="200" alt="Crispy Meat Sambusa">
+                    <h4>Crispy Meat Sambusa</h4>
+                    <span>3,000 Tzs</span>
+                    <button class="add-btn" data-name="Crispy Meat Sambusa" data-price="3000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 16. Ugali Kuku wa Kienyeji -->
+                <div class="menu-card lunch dinner" data-category="lunch dinner">
+                    <img src="images/foods/ugalikuku.jpg" width="200" alt="Ugali Kuku wa Kienyeji">
+                    <h4>Ugali Kuku wa Kienyeji</h4>
+                    <span>10,000 Tzs</span>
+                    <button class="add-btn" data-name="Ugali Kuku wa Kienyeji" data-price="10000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 17. Nyama Choma Platter -->
+                <div class="menu-card lunch dinner snacks" data-category="lunch dinner snacks">
+                    <img src="images/foods/nyamachoma.jpg" width="200" alt="Nyama Choma Platter">
+                    <h4>Nyama Choma Platter</h4>
+                    <span>12,000 Tzs</span>
+                    <button class="add-btn" data-name="Nyama Choma Platter" data-price="12000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 18. Chef's Special Mixed Grill -->
+                <div class="menu-card lunch dinner" data-category="lunch dinner">
+                    <img src="images/foods/649c78ab4e8c40e4c6f403758dc76511.jpg" width="200" alt="Chef's Special Mixed Grill">
+                    <h4>Chef's Special Mixed Grill</h4>
+                    <span>22,000 Tzs</span>
+                    <button class="add-btn" data-name="Chef's Special Mixed Grill" data-price="22000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 19. Royal Swahili Breakfast Combo -->
+                <div class="menu-card breakfast" data-category="breakfast">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=300&q=80" width="200" alt="Royal Swahili Breakfast Combo">
+                    <h4>Swahili Breakfast Combo</h4>
+                    <span>6,000 Tzs</span>
+                    <button class="add-btn" data-name="Swahili Breakfast Combo" data-price="6000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 20. Spanish Omelette & Sausages -->
+                <div class="menu-card breakfast snacks" data-category="breakfast snacks">
+                    <img src="https://images.unsplash.com/photo-1510693206972-df098062cb71?w=300&q=80" width="200" alt="Spanish Omelette & Sausages">
+                    <h4>Spanish Omelette &amp; Sausages</h4>
+                    <span>4,500 Tzs</span>
+                    <button class="add-btn" data-name="Spanish Omelette & Sausages" data-price="4500">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 21. Fresh Fluffy Pancakes & Honey -->
+                <div class="menu-card breakfast snacks" data-category="breakfast snacks">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=300&q=80" width="200" alt="Fresh Fluffy Pancakes & Honey">
+                    <h4>Fluffy Pancakes &amp; Honey</h4>
+                    <span>5,000 Tzs</span>
+                    <button class="add-btn" data-name="Fluffy Pancakes & Honey" data-price="5000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 22. Famous Chips Mayai (Zege) -->
+                <div class="menu-card lunch dinner snacks" data-category="lunch dinner snacks">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300&q=80" width="200" alt="Famous Chips Mayai">
+                    <h4>Chips Mayai (Zege)</h4>
+                    <span>4,000 Tzs</span>
+                    <button class="add-btn" data-name="Chips Mayai (Zege)" data-price="4000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 23. Golden Crispy French Fries -->
+                <div class="menu-card lunch dinner snacks" data-category="lunch dinner snacks">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300&q=80" width="200" alt="Golden Crispy French Fries">
+                    <h4>Golden French Fries</h4>
+                    <span>3,500 Tzs</span>
+                    <button class="add-btn" data-name="Golden French Fries" data-price="3500">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 24. Grilled Beef Mishkaki (4 Skewers) -->
+                <div class="menu-card lunch dinner snacks" data-category="lunch dinner snacks">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=300&q=80" width="200" alt="Grilled Beef Mishkaki">
+                    <h4>Grilled Beef Mishkaki</h4>
+                    <span>6,000 Tzs</span>
+                    <button class="add-btn" data-name="Grilled Beef Mishkaki" data-price="6000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 25. Spiced Masala Milk Tea (Chai ya Maziwa) -->
+                <div class="menu-card breakfast drinks" data-category="breakfast drinks">
+                    <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=300&q=80" width="200" alt="Spiced Masala Milk Tea">
+                    <h4>Spiced Masala Milk Tea</h4>
+                    <span>2,500 Tzs</span>
+                    <button class="add-btn" data-name="Spiced Masala Milk Tea" data-price="2500">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 26. Fresh Mango & Passion Smoothie -->
+                <div class="menu-card drinks" data-category="drinks">
+                    <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=300&q=80" width="200" alt="Fresh Mango & Passion Smoothie">
+                    <h4>Mango &amp; Passion Smoothie</h4>
+                    <span>4,000 Tzs</span>
+                    <button class="add-btn" data-name="Mango & Passion Smoothie" data-price="4000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 27. Ice Cold Hibiscus Zobo Cooler -->
+                <div class="menu-card drinks" data-category="drinks">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=300&q=80" width="200" alt="Ice Cold Hibiscus Cooler">
+                    <h4>Ice Cold Hibiscus Cooler</h4>
+                    <span>3,000 Tzs</span>
+                    <button class="add-btn" data-name="Ice Cold Hibiscus Cooler" data-price="3000">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- 28. Rich Cappuccino & Espresso -->
+                <div class="menu-card breakfast drinks" data-category="breakfast drinks">
+                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=300&q=80" width="200" alt="Rich Cappuccino & Espresso">
+                    <h4>Rich Cappuccino &amp; Latte</h4>
+                    <span>3,500 Tzs</span>
+                    <button class="add-btn" data-name="Rich Cappuccino & Latte" data-price="3500">
+                        <i class="fa fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <aside class="cart">
+
+            <!-- HEADER -->
+            <h4>
+                Your Cart
+                <i class="fa fa-cart-arrow-down"></i>
+            </h4>
+
+
+            <!-- SCROLLABLE ITEMS -->
+            <div class="cart-items"></div>
+
+
+            <!-- FIXED FOOTER -->
+            <div class="cart-footer">
+
+                <div class="total">
+
+                    <span>Total</span>
+
+                    <span>
+                        <span class="cart-total">0</span> Tzs
+                    </span>
+
+                </div>
+
+
+                <button class="checkout">
+                    Check Out
+                </button>
+
+            </div>
+
+        </aside>
+                        <!--footer section-->
+        <footer>
+            <div class="about">
+                <div class="restaurant-logo">
+                    <img src="images/logo.jpg" width="100" alt="Kudy Restaurant logo">
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cupiditate quas optio modi quis nobis doloribus, doloremque, culpa cumque molestias enim dolorum impedit nostrum, error ullam a corporis ut deleniti.</p>
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/kudyrestaurant" class="social-icon tiktok" target="_blank">
+                                <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kudyrestaurant" class="social-icon instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/kudyrestaurant" class="social-icon facebook" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/kudyrestaurant" class="social-icon youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" class="nav-link"> HOME </a></li>
+                    <li><a href="menu.html" class="nav-link"> MENU </a></li>
+                    <li><a href="about.html" class="nav-link"> ABOUT US </a></li>
+                    <li><a href="gallery.html" class="nav-link"> GALLERY </a></li>
+                    <li><a href="reserve.html" class="nav-link"> RESERVATION </a></li>
+                    <li><a href="contact.html" class="nav-link"> CONTACT US </a></li>
+                </ul>
+            </div>
+
+            <div class="working-days">
+                <h3>Opening Hours</h3>
+
+                <div class="opening-day">
+                    <span>Monday</span>
+                    <span>6:00 AM - 9:00 PM</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Tuesday</span>
+                    <span>6:00 AM - 9:00 PM</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Wednesday</span>
+                    <span>6:00 AM - 9:00 PM</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Thursday</span>
+                    <span>6:00 AM - 9:00 PM</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Friday</span>
+                    <span>7:00 AM - 4:00 PM</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Saturday</span>
+                    <span>Closed</span>
+                </div>
+
+                <div class="opening-day">
+                    <span>Sunday</span>
+                    <span>7:00 AM - 4:00 PM</span>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                        <!-- contact items + icons -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-phone"></i>
+                    </div> 
+                    <p>+255 674 732 970 <br> +255 782 106 776</p>
+                </div>
+                <div class="contact-item">
+                    <div class="email-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div> 
+                    <p>kudyrestaurant@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <div class="location-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div> 
+                    <p>Mwanza, Tanzania <br> Nyerere Road street</p>
+                </div>
+              
+                                <!--- copyright info-->
+                <div class="copyright">
+                    <p>&copy; 2026 Kudy Restaurant. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
