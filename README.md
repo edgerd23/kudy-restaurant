@@ -63,6 +63,7 @@ Fixed checkout section
 Touch-friendly controls
 
 ## 📂 Project Structure
+```text
 Kudy Restaurant/
 │
 ├── index.html
@@ -81,12 +82,9 @@ Kudy Restaurant/
 │   ├── main.js
 │   └── checkout.js
 │
-└── ├── images/
-     ├── foods/
-     ├── gallery/
-     ├── profile/
-     ├── aboutus/
-     └── logo.jp
+└── images/
+```
+
 
 ## 📄 Website Pages
 
